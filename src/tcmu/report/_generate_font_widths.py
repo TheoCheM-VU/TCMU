@@ -1,3 +1,9 @@
+# this script requires
+# node@18.2.0
+# canvas@3.2.3
+# jsdom@13.2.0
+
+
 import subprocess as sp
 import os
 
