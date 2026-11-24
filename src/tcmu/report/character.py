@@ -1,5 +1,4 @@
 import os
-
 import tcmu.log as log
 from tcmu import cache
 
@@ -62,7 +61,7 @@ def get_pixel_width(character: str, font: str = "calibri", font_size: float = 11
     if font not in widths.keys():
         raise ValueError(f"Could not find font {font}.")
 
-    return widths[font][character] * font_size
+    return widths[font].get(character, 1) * font_size
 
 
 def text_width(text: str, font: str = "calibri", font_size: float = 11, mode: str = "pixels") -> float:
